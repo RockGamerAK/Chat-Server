@@ -1,7 +1,6 @@
-const http = require("http")
-  fs = require('fs');
-http.createServer();
+const http = require("http").createServer();
 const io = require("socket.io")(http);
+
 io.on("connect", socket => {
   socket.on("livechatping", () => {
     socket.emit("livechatpong");
@@ -23,14 +22,5 @@ io.on("connect", socket => {
   //  console.log(socket.id + " disconnected.")
   //});
 });
-const { readFile } = require('fs').promises;
-fs.readFile('index.html', function (err, html) {
-    if (err) {
-        throw err; 
-    }       
-    http.createServer(function(request, response) {  
-        response.writeHeader(200, {"Content-Type": "text/html"});  
-        response.write(html);  
-        response.end();  
-    }).listen(3001);
-});
+
+http.listen(3001);
