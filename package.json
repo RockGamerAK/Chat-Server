@@ -1,0 +1,19 @@
+{
+  "name": "repl-chat-server",
+  "version": "1.0.0",
+  "description": "Server for chatting with the Repl-Chat client.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "repl-chat",
+    "server",
+    "repl-chat-server"
+  ],
+  "author": "williamross6",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  }
+}
